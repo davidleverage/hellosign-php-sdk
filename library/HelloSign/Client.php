@@ -503,8 +503,9 @@ class Client
      */
     public function getSignatureRequests($params = [])
     {
-        if(!$params['page'])
+        if(!isset($params['page']))
             $params['page'] =1;
+        $page = $params['page'];
 
         $response = $this->rest->get(
             static::SIGNATURE_REQUEST_LIST_PATH,
