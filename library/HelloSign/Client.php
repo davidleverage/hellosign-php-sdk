@@ -501,6 +501,7 @@ class Client
      * @return SignatureRequestList
      * @throws BaseException
      */
+    
     public function getSignatureRequests($params = [])
     {
         if(!$params['page'])
